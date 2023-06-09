@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,43 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+:root {
+  --toolbar-theme: {
+    background-color: rebeccapurple;
+    color: white;
+    border: 1px solid green;
+  };
 }
+
+@font-face {
+  font-family: myFirstFont;
+  src: url(./Fonts/0199-LNTH-pincoyablack.ttf);
+}
+
+
+@font-face {
+  font-family: mySecondFont;
+  src: url(./Fonts/iCiel\ LOUSIANE.ttf);
+}
+
+h5 {
+  font-family: myFirstFont;
+} 
+a {
+  font-family:mySecondFont
+} 
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.call-to-action {
+  background-color: #667eea;
+}
+
