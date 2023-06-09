@@ -58,9 +58,9 @@ function App() {
         </nav>
         <nav>
           <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-            <a href="#" class="font-bold text-2xl lg:text-4xl">
-              TAILWIND
-            </a>
+            <h5 class="font-bold text-2xl lg:text-4xl text-[#42855B]">
+              Nhà Của Lạc
+            </h5>
             <div class="block md:hidden">
               <button class="flex items-center px-3 py-2 border rounded text-gray-500 boder-gray-600 hiver:text-gray-800">
                 <svg
