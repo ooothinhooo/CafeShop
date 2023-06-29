@@ -468,47 +468,86 @@ products.map((item)=>{
 
 document.querySelector("#xxxxxxxxxxxxxxxxxxxxxxxxxx").innerHTML= html
 
+function myFunction() {
+  var x = document.getElementById("menu_ncl").value;
+  var result = [];
+  if (x == "ALL") {
+    result = products;
+  } else {
+    result = products.filter((item) => {
+      return item.category == x;
+    });
+  }
 
-const trasua= products.filter((item)=>{
-  return item.category =="TRÀ SỮA"
-})
-const suachua= products.filter((item)=>{
-  return item.category =="SỮA CHUA"
-})
-const yaourt= products.filter((item)=>{
-  return item.category =="YAOURT"
-})
-const tra= products.filter((item)=>{
-  return item.category =="TRÀ"
-})
-const sinhto= products.filter((item)=>{
-  return item.category =="SINH TỐ"
-})
-const daxay= products.filter((item)=>{
-  return item.category =="ĐÁ XAY"
-})
-const topping= products.filter((item)=>{
-  return item.category =="TOPPING"
-})
-const nuocep= products.filter((item)=>{
-  return item.category =="NƯỚC ÉP"
-})
-const caphe= products.filter((item)=>{
-  return item.category =="CAFE"
-})
-const soda= products.filter((item)=>{
-  return item.category =="SODA"
-})
-const banhngot= products.filter((item)=>{
-  return item.category =="BÁNH NGỌT"
-})
-const anvat= products.filter((item)=>{
-  return item.category =="ĂN VẶT"
-})
-const thuocla= products.filter((item)=>{
-  return item.category =="THUỐC LÁ"
-})
+  var html = "";
+  result.map((item) => {
+    html += `
+  <div  class="showcase">
 
+  <a href="#" class="showcase-img-box">
+   
+  </a>
+
+  <div class="showcase-content">
+
+    <a href="#">
+      <h4 class="showcase-title uppercase" style="text-transform: uppercase;">${item.title}</h4>
+    </a>
+
+    <a href="#" class="showcase-category">${item.category}</a>
+
+    <div class="price-box">
+      <p class="price">${item.price}.000 VNĐ</p>
+     
+    </div>
+
+  </div>
+
+</div>
+  `;
+  });
+  document.querySelector("#xxxxxxxxxxxxxxxxxxxxxxxxxx").innerHTML = html;
+}
+
+const trasua = products.filter((item) => {
+  return item.category == "TRÀ SỮA";
+});
+const suachua = products.filter((item) => {
+  return item.category == "SỮA CHUA";
+});
+const yaourt = products.filter((item) => {
+  return item.category == "YAOURT";
+});
+const tra = products.filter((item) => {
+  return item.category == "TRÀ";
+});
+const sinhto = products.filter((item) => {
+  return item.category == "SINH TỐ";
+});
+const daxay = products.filter((item) => {
+  return item.category == "ĐÁ XAY";
+});
+const topping = products.filter((item) => {
+  return item.category == "TOPPING";
+});
+const nuocep = products.filter((item) => {
+  return item.category == "NƯỚC ÉP";
+});
+const caphe = products.filter((item) => {
+  return item.category == "CAFE";
+});
+const soda = products.filter((item) => {
+  return item.category == "SODA";
+});
+const banhngot = products.filter((item) => {
+  return item.category == "BÁNH NGỌT";
+});
+const anvat = products.filter((item) => {
+  return item.category == "ĂN VẶT";
+});
+const thuocla = products.filter((item) => {
+  return item.category == "THUỐC LÁ";
+});
 
 var html_trasua = "";
 var html_suachua = "";
@@ -524,10 +563,7 @@ var html_banhngot = "";
 var html_anvat = "";
 var html_thuocla = "";
 
-
-
-
-trasua.map((item)=>{
+trasua.map((item) => {
   html_trasua += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -535,10 +571,10 @@ trasua.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
+  `;
+});
 
-suachua.map((item)=>{
+suachua.map((item) => {
   html_suachua += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -546,10 +582,10 @@ suachua.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
+  `;
+});
 
-yaourt.map((item)=>{
+yaourt.map((item) => {
   html_yaourt += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -557,10 +593,10 @@ yaourt.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
+  `;
+});
 
-tra.map((item)=>{
+tra.map((item) => {
   html_tra += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -568,10 +604,10 @@ tra.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
+  `;
+});
 
-sinhto.map((item)=>{
+sinhto.map((item) => {
   html_sinhto += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -579,9 +615,9 @@ sinhto.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-daxay.map((item)=>{
+  `;
+});
+daxay.map((item) => {
   html_daxay += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -589,9 +625,9 @@ daxay.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-topping.map((item)=>{
+  `;
+});
+topping.map((item) => {
   html_topping += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -599,9 +635,9 @@ topping.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-nuocep.map((item)=>{
+  `;
+});
+nuocep.map((item) => {
   html_nuocep += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -609,9 +645,9 @@ nuocep.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-caphe.map((item)=>{
+  `;
+});
+caphe.map((item) => {
   html_caphe += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -619,10 +655,10 @@ caphe.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-console.log(nuocep)
-soda.map((item)=>{
+  `;
+});
+console.log(nuocep);
+soda.map((item) => {
   html_soda += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -630,9 +666,9 @@ soda.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-banhngot.map((item)=>{
+  `;
+});
+banhngot.map((item) => {
   html_banhngot += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -640,10 +676,10 @@ banhngot.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
+  `;
+});
 
-anvat.map((item)=>{
+anvat.map((item) => {
   html_anvat += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -651,9 +687,9 @@ anvat.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-thuocla.map((item)=>{
+  `;
+});
+thuocla.map((item) => {
   html_thuocla += `
   <li  class="sidebar-submenu-category">
   <a href="#" class="sidebar-submenu-title">
@@ -661,9 +697,9 @@ thuocla.map((item)=>{
     <data value=${item.price} class="stock" title=${item.title}>${item.price}.000 VNĐ</data>
   </a>
 </li>
-  `
-})
-console.log(html_nuocep)
+  `;
+});
+
 document.querySelector("#html_trasua").innerHTML= html_trasua
 document.querySelector("#html_suachua").innerHTML= html_suachua
 document.querySelector("#html_yaourt").innerHTML= html_yaourt

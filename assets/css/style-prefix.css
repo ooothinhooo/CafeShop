@@ -1101,7 +1101,8 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 .sidebar-submenu-category-list.active {
   padding: 13px 0 8px;
-  max-height: 122px;
+  max-height: 100%;
+  /* height: 100%; */
   visibility: visible;
 }
 
